@@ -19,4 +19,9 @@ export class AppController {
   getUser(): { username: string; age: number } {
     return this.appService.getUserInfo();
   }
+
+  @Get('connection')
+  getConnection(): string {
+    return this.appService.getConnectionInfo();
+  }
 }
